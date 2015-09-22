@@ -1,2 +1,2 @@
-# goScripts
-my test go scripts
+# shScripts
+my shell scripts
