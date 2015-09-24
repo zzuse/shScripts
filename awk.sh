@@ -22,3 +22,6 @@ awk -F '\n' '{if(length($0)!=295)print $0}' AMSC1.200712283741.FT.cdr
 ps -ef|grep Prep|grep -v grep|grep acct|awk '{print $2}'|xargs kill
 awk 'BEGIN{sum=0}{sum=sum+int(substr($0,218,6))}END{print sum}'
 grep -i MODIFYMO tc_dd9999.c | awk -F '/' '{print $3}' | sed -e 's/");//g'
+
+more shape100.txt  | awk '{print $1}' | sort | uniq -c | sort -rn
+awk -F " " '{for(i=1;i<=NF;++i) {++a[$i]}next}END{for (j=0;j<=40;++j)print a[j]}' shapefactor100.txt

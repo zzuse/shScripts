@@ -17,3 +17,4 @@ sed -i 's/172.25.126.10/172.25.126.50/g' *.log
 cat a.txt | xargs -i cat "cs/{}" > mysqldiff.txt
 find . -name "*[l|x][o|m][g|l]"  |xargs -i sed -i 's/172.25.126.10/172.25.126.50/g' {}
 ssh root@vm50 cat /tmp/pup.config | diff ./pup.config_0416 -
+sed 's/\(.*\)key\(.*\)values\(.*\)/\2/g' fmtnewsmslog
